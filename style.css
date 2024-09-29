@@ -125,10 +125,7 @@ section {
     /* margin-bottom: 2rem; */
 }
 
-.buttons {
-    background-color: #F9FAFB;
-    flex: 1;
-}
+
 
 .it {
     font-style: italic;
@@ -170,4 +167,32 @@ input:focus {
 
 input:invalid {
     border-color: #c71919;
+}
+
+.buttons {
+    margin-top: 2rem;
+    background-color: #F9FAFB;
+    flex: 1;
+    
+}
+.buttons > div {
+    margin-top: 2rem;
+}
+
+.create-account {
+    background-color: #0d5782;
+    color: #ececec;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-style: solid;
+    border-radius: 12px;
+    box-shadow: none;
+    padding: 12px;
+    padding-left:  2rem;
+    padding-right: 2rem;
+
+}
+
+.buttons .link {
+    color: #0d5782;
 }
