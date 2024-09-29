@@ -7,6 +7,7 @@
 
 body {
     margin: 0px;
+    font-family: "Inter";
 }
 
 div {
@@ -20,7 +21,7 @@ div {
 
 .sidebar {
     width: 100%;
-    background-image: url(./images/background.jpg);
+    background-image: url("./images/background.jpg");
     background-size: 100%;
     flex: 2;
     position: relative;
@@ -38,6 +39,7 @@ div {
     justify-content: center;
     align-items: center;
     --banner-size: 8rem;
+    overflow: hidden;
 }
 
 .odin-text {
@@ -45,7 +47,7 @@ div {
     font-family: "Norse-Bold";
 }
 
-.logo > img {
+.logo>img {
     height: var(--banner-size);
     width: auto;
 }
@@ -56,14 +58,116 @@ div {
     bottom: 2%;
     color: white;
     text-align: center;
+    overflow: hidden;
 
-    font-family: "Inter";
 }
 
-.author > a {
+.author>a {
     color: white;
 }
 
 .main {
     flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.main>* {
+    padding-left: 2rem;
+}
+
+.message {
+    flex: 1;
+    display: flex;
+    background-color: #ececec;
+}
+
+.message-wrapper {
+    line-height: 1.8rem;
+    width: 80%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-block;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+}
+
+.signup-form {
+    height: 100%;
+    flex: 1.2 1.2 0;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+    height: 100%;
+    gap: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.signup-form>.hype-message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.signup-form>form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    display: flex;
+    flex: 1 1 0;
+    gap: 2rem;
+    /* border: 1px solid green; */
+    /* margin-bottom: 2rem; */
+}
+
+.buttons {
+    background-color: #F9FAFB;
+    flex: 1;
+}
+
+.it {
+    font-style: italic;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-transform: uppercase;
+    color: #3f3f3f;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+label.match {
+    visibility: hidden;
+    text-transform: none;
+    color: rgb(224, 27, 27);
+    font-size: 0.8rem;
+}
+
+input {
+    font-size: 1.3rem;
+    border: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d0d0d0;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #0d5782;
+}
+
+input:invalid {
+    border-color: #c71919;
 }
